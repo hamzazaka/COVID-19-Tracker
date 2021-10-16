@@ -3,25 +3,26 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 export default function FetchData() {
-
     const [countries,setCountries]=useState([]);
 
-    const URL='https://api.covid19api.com/summary';
+    const URL= 'https://api.covid19api.com/summary'
 
-    const fetchCountryData=  async ()=>{
-        const response=await axios.get(URL);
-        console.log(response);
-
+    const fetchCountriesData= async ()=>{
+        const response=await axios.get(URL)
+        console.log(response.data.Countries[0].Country);
+        setCountries(response.data.Countries);
     }
 
+    useEffect(() => {
+        fetchCountriesData()
+    }, [])
 
-    useEffect(()=>{
-        fetchCountryData()
-    })
-
-    return (
+    return(
         <div>
-            <h1>hello form fetch Data</h1>
+            <h1>{countries.Country}</h1>
         </div>
     )
+    
+
 }
+
