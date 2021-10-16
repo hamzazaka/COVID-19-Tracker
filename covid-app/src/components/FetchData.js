@@ -9,7 +9,7 @@ export default function FetchData() {
 
     const fetchCountriesData= async ()=>{
         const response=await axios.get(URL)
-        console.log(response.data.Countries[0].Country);
+        console.log(response.data.Countries);
         setCountries(response.data.Countries);
     }
 
@@ -19,7 +19,25 @@ export default function FetchData() {
 
     return(
         <div>
-            <h1>{countries.Country}</h1>
+            <h1>{countries.length} Countires</h1>
+            <section>
+                {countries.map((country)=>{
+                    const {ID,Country,CountryCode,NewConfirmed,TotalConfirmed,NewDealths}=country
+
+                    return(
+                        <article key={ID}>
+                            <h2>{Country} {CountryCode}</h2>
+                            <ul>
+                                <li>{NewConfirmed}</li>
+                                <li>{TotalConfirmed}</li>
+                                <li>{NewDealths}</li>
+
+
+                            </ul>
+                        </article>
+                    )
+                })}
+            </section>
         </div>
     )
     
