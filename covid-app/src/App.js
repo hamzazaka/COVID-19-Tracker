@@ -1,13 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 import { FormControl, MenuItem, Select } from '@material-ui/core';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
 function App() {
 
   const[countries,setCountries]=useState(['usa','uk','pk']);
+
+  useEffect(()=>{
+    const getCountriesData=async ()=>{
+      await fetch("https://disease.sh/v3/covid-19/countries")
+      .then((response)=>response.json())
+      .then((data)=>{
+        
+      })
+    }
+  },[])
 
   return(
 
