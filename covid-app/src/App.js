@@ -1,41 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState, useEffect} from 'react';
-import axios from 'axios';
+import { FormControl, MenuItem, Select } from '@material-ui/core';
+import { useState } from 'react';
 
 
-import Header from './components/header';
 
 function App() {
 
-  const [countries,setCountries]=useState([]);
-  const[isPending,setisPending]=useState(true)
+  const[countries,setCountries]=useState(['usa','uk','pk']);
 
-    const URL= 'https://api.covid19api.com/summary'
+  return(
 
-    useEffect(() => {
+    <div className="app">
+      <div className="app__header">
+    <h1>Covid-19 Tracker</h1>
+      <FormControl className='app__dropdown'>
+        <Select variant='outlined' value='abc'>
+          {
+            countries.map(country=>(
+              <MenuItem value={country}>{country}</MenuItem>
+            ))
+          }
 
-  const fetchCountriesData=async ()=>{
-    const response=await axios.get(URL);
-    console.log(response);
-    setCountries(response);
-    setisPending(false)
-  }
-  fetchCountriesData()
-},[])
- 
-  // console.log(countries);
-
-  return (
-    <div className="App">
-      {isPending===true?
-       <h1>Loading.....</h1>:
-      <Header countries={countries}/>
-      }
-      <h1>hello world</h1>
-      
+       </Select>
+      </FormControl>
+      </div>
+     
     </div>
-  );
+  )
+  
 }
 
 export default App;

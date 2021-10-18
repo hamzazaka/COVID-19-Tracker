@@ -1,29 +1,9 @@
-
-/* /////////// HEADER ////////////////// */
-
 *{
-  color: white;
-
+    margin: 0;
 }
-
-.header{
-  background-image: url('https://images.unsplash.com/photo-1584466990376-09422a2b033a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
-  -webkit-background-size:cover;
-  background-size: cover;
-  background-position: center center;
-  filter: blur(0.9px);
-  height: 60vh;
-  /* background-size: 100% 500px; */
-    /* background-position:right 55% bottom 45%; */
-}
-
-.header h1{
-  
-}
-.header li{
-   list-style: none;
-   font-size: 35px;
-   color: aliceblue;
-   text-align: center;
-
+.app__header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
 }
