@@ -92,7 +92,7 @@ function App() {
 
          <h3>WordWide new Cases</h3>
 
-         <Linegraph />
+         <Linegraph  />
        </CardContent>
      </Card>
     </div>
