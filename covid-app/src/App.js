@@ -14,9 +14,14 @@ function App() {
       await fetch("https://disease.sh/v3/covid-19/countries")
       .then((response)=>response.json())
       .then((data)=>{
-        
+        const countries=data.map((country)=>({
+          name:country.country,
+          value:country.countryInfo.iso2
+        }));
+        setCountries(countries)
       })
     }
+    getCountriesData()
   },[])
 
   return(
@@ -28,7 +33,7 @@ function App() {
         <Select variant='outlined' value='abc'>
           {
             countries.map(country=>(
-              <MenuItem value={country}>{country}</MenuItem>
+              <MenuItem value={country.value}>{country.name}</MenuItem>
             ))
           }
 
