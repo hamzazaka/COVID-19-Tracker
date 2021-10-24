@@ -55,3 +55,58 @@ body{
     background-color: #f3f2f8;
 }
 
+
+/* infobox */
+
+.info-flag img{
+    width: 100px;
+    break-before: 5px;
+}
+
+.info-flag{
+    height: 80px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.info-name{
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.info-confirmed,
+.info-recovered,
+.info-deaths{
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.info-container{
+    width: 150px;
+}
+
+
+/* infobox css */
+
+.infoBox{
+    flex: 1;
+}
+
+.infoBox :not(:last-child){
+    margin-right: 15px;
+}
+
+.infoBox__cases{
+    color: #cc1034;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+.infoBox__total{
+    color: #6c757d;
+    font-weight: 700 !important;
+    font-size: 0.8rem  !important;
+    margin-top: 15px !important;
+}
