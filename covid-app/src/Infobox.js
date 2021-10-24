@@ -1,9 +1,9 @@
 import { Card, CardContent, Typography } from '@material-ui/core'
 import React from 'react'
 
-export default function Infobox({title,cases,total}) {
+export default function Infobox({title,cases,active,isRed,total,...props}) {
     return (
-        <Card className='infoBox'>
+        <Card onClick={props.onClick} className={`infoBox ${active && 'infoBox--selected'} ${isRed && 'infoBox--Red'}`}>
             <CardContent>
                 <Typography className='infoBox__title' color="textSecondary">
                     {title}
