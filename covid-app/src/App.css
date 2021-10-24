@@ -1,11 +1,19 @@
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body{
     background-color: #f5f6fa;
 }
+
+/* //////////// HEADER ////////////////////////*/
+
+
+/* ///////////  HEADER END HERE ///////////////*/
+
 
 .app{
     display: flex;
@@ -120,3 +128,9 @@ body{
 /* .infoBox--Red{
     border-color: red;
 } */
+
+/* HEADER */
+
+.header{
+    height: 60vh;
+}

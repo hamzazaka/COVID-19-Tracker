@@ -9,6 +9,9 @@ import {sortData} from './util';
 import Linegraph from './Linegraph';
 import 'leaflet/dist/leaflet.css';
 import { prettyPrintStat } from './util';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import News from './components/News';
 
 
 
@@ -72,11 +75,14 @@ function App() {
   console.log('country info', countryInfo);
 
   return(
-
+    <>
+    <Navbar/>
+    <News/>
+      <Header/>
     <div className="app">
       <div className="app__left">
       <div className="app__header">
-    <h1>Covid-19 Tracker</h1>
+    <h1>Covid-19 Data </h1>
       <FormControl className='app__dropdown'>
         <Select variant='outlined' onChange={onCountryChange} value={country} >
           <MenuItem value='Worldwide'>WorldWide</MenuItem>
@@ -121,6 +127,7 @@ function App() {
        </CardContent>
      </Card>
     </div>
+    </>
   )
   
 }
