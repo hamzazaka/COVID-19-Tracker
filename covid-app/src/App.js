@@ -77,7 +77,7 @@ function App() {
   return(
     <>
     <Navbar/>
-    <News/>
+    {/* <News/> */}
       <Header/>
     <div className="app">
       <div className="app__left">
