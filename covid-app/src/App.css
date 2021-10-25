@@ -137,18 +137,37 @@ body{
 
 /* ///////////// NEWS ROOM ////////////// */
 
+.news_body{
+    width: 80%;
+    margin: 0 auto;
+}
+
 .all-news{
+    margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 10px;
 }
+
+.news{
+    max-width: 500px;
+    padding: 30px;
+    border: 1px solid ;
+
+}
+
 .inner{
-    background-color: green;
     border: 2px solid yellow;
+     box-shadow: 1px 3px 5px rgba(221, 5, 5, 0.671);
+     padding: 40px;
 }
 .inner img{
     height: 350px;
     width: 200px;
+}
+.news_author{
+    font-size: 23px;
+    font-weight: 600;
 }
 
 

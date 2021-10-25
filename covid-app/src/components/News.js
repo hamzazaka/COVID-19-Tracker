@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function News() {
 const[news,setNews]=useState();
 
-const News='https://newsapi.org/v2/everything?qInTitle="covid-19"&from=2021-10-24&language=en&sortBy=publishedAt&apiKey=3d3699fa5c1641c4ac4fac5e8cf46d27';
+const News='https://newsapi.org/v2/everything?qInTitle="covid-19"&language=en&sortBy=publishedAt&apiKey=3d3699fa5c1641c4ac4fac5e8cf46d27';
 
 const newsData= async ()=>{
         await fetch(News)
@@ -21,20 +21,24 @@ const newsData= async ()=>{
 
 
     return (
-        <section>
-            {news?.length > 0 && (
+        <section className='news_body'>
+            <h1>Top News of Covid-19</h1>
+        {news?.length > 0 && (
         <div className='all-news'>
             {news.map((mynews)=>{
                 return(
                 <div className='news inner'>
-                <img src={mynews.urlToImage} alt="hello" />
-               <p>{mynews.author}</p>
-               <p>{mynews.description}</p>
+                <img src={mynews.urlToImage==null? 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60':mynews.urlToImage} alt='Image not availale' />
+                <h1>{mynews.title}</h1>
+               <p className='news_author'>{mynews.author}</p>
+               <p className='news_description'>{mynews.description}</p>
                 </div>
             )})}
         </div>
-            )}
+        )}
         </section>
             
     )
 }
+
+// mynews.urlToImage?.length>0 && (mynews.urlToImage)
