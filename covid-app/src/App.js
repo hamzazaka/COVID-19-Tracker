@@ -77,6 +77,7 @@ function App() {
   return(
     <>
     <Navbar/>
+    <News/>
       <Header/>
     <div className="app">
       <div className="app__left">
@@ -126,7 +127,7 @@ function App() {
        </CardContent>
      </Card>
     </div>
-     <News/>
+     
     </>
   )
   

@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -17,10 +18,9 @@ body{
 
 .app{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenlyf;
 }
 .app__header{
-    display: flex;
     align-items: center;
     margin-bottom: 20px;
     justify-content: space-between;
@@ -134,3 +134,22 @@ body{
 .header{
     height: 60vh;
 }
+
+/* ///////////// NEWS ROOM ////////////// */
+
+.all-news{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+.inner{
+    background-color: green;
+    border: 2px solid yellow;
+}
+.inner img{
+    height: 350px;
+    width: 200px;
+}
+
+
+
