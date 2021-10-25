@@ -18,9 +18,10 @@ body{
 
 .app{
     display: flex;
-    justify-content: space-evenlyf;
+    justify-content: space-evenly;
 }
 .app__header{
+    display: flex;
     align-items: center;
     margin-bottom: 20px;
     justify-content: space-between;
@@ -138,32 +139,34 @@ body{
 /* ///////////// NEWS ROOM ////////////// */
 
 .news_body{
-    width: 80%;
-    margin: 0 auto;
+    padding: 15px;
+    margin: 15px;
+    box-sizing: border-box;
+
 }
 
-.all-news{
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 10px;
+.news-inner{
+    /* border: 3px solid green; */
+    padding: 30px;
 }
 
 .news{
     max-width: 500px;
     padding: 30px;
-    border: 1px solid ;
+    border: 1px solid black;
+    border-radius: 5px;
 
 }
 
 .inner{
-    border: 2px solid yellow;
-     box-shadow: 1px 3px 5px rgba(221, 5, 5, 0.671);
-     padding: 40px;
+    /* border: 2px solid yellow; */
+     box-shadow: 1px 3px 5px rgba(29, 24, 24, 0.671);
+     padding: 10px;
+     border: 6px solid rgb(224, 217, 217);
 }
 .inner img{
     height: 350px;
-    width: 200px;
+    width: 400px;
 }
 .news_author{
     font-size: 23px;

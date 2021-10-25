@@ -21,16 +21,16 @@ const newsData= async ()=>{
 
 
     return (
-        <section className='news_body'>
-            <h1>Top News of Covid-19</h1>
+        <section className='news_body '>
+            <h1 className='text-center'>Top News of Covid-19</h1>
         {news?.length > 0 && (
-        <div className='all-news'>
+        <div className='row news-inner'>
             {news.map((mynews)=>{
                 return(
-                <div className='news inner'>
+                <div className='col-md-4 inner'>
                 <img src={mynews.urlToImage==null? 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60':mynews.urlToImage} alt='Image not availale' />
                 <h1>{mynews.title}</h1>
-               <p className='news_author'>{mynews.author}</p>
+               {/* <p className='news_author'>{mynews.author}</p> */}
                <p className='news_description'>{mynews.description}</p>
                 </div>
             )})}
