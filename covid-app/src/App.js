@@ -25,7 +25,7 @@ function App() {
   const[mapCenter,setMapCenter]=useState({lat:34.80746, lng:-40.4796});
   const [mapZoom,setMapZoom]=useState(1);
   const[mapCountries,setmapCountries]=useState([]);
-  const[casesTypes,setCasesType]=useState('cases')
+  const[casesTypes,setCasesType]=useState('cases');
 
 
 

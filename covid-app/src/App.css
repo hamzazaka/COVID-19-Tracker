@@ -177,7 +177,7 @@ body{
     font-weight: 400;
     margin: 20px ;
 }
-.news_heading span{
+.news_heading span ,p span{
     font-size: 22px;
     font-weight: 600;
 }
@@ -190,5 +190,14 @@ h4 span{
     color: var(--blue);
 }
 
+.all_countries{
+    padding: 40px;
+    margin-left: 30px;
+}
+.one_country{
+box-shadow: 1px 3px 5px rgba(43, 36, 36, 0.671);
+     padding: 10px;
+     border: 20px solid rgb(255, 255, 255)
+}
 
 
