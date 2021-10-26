@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 export default function Allcountries() {
 const [countries,setCountries]=useState([]);
+const [searchCountry,setSearchCountry]=useState('')
 
 const URL_Countries='https://disease.sh/v3/covid-19/countries'
 
@@ -13,7 +14,10 @@ const URL_Countries='https://disease.sh/v3/covid-19/countries'
          setCountries(data);
      })
   }
-  console.log(countries);
+
+  const filteredCountries= countries.filter(country=>{
+      return (country.country.toLowerCase()).includes(searchCountry.toLowerCase());
+  })
 
   useEffect(()=>{
       allCountries()
@@ -23,8 +27,12 @@ const URL_Countries='https://disease.sh/v3/covid-19/countries'
     return (
         <div className=' all_countries'>
             <h1 className='text-center pb-3'>All Countries</h1>
+            <div className='text-center pb-3'>
+
+        <input className='text-center p-3' type="text" placeholder='Search Your Country' onChange={e=>setSearchCountry(e.target.value)}/>
+            </div>
             <div className="row">
-            {countries.map((mycountry)=>{
+            {filteredCountries.map((mycountry)=>{
                 const{countryInfo,country,cases,recovered,deaths}=mycountry;
                 return(
                 <div className='col-md-3 one_country'>
