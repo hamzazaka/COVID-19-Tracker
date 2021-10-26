@@ -16,10 +16,10 @@ export default function Navbar() {
         <Link className="nav-link" to='/'>Home <span className="sr-only">(current)</span></Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to='news'>Covid-19 News</Link>
+        <Link className="nav-link " to='allcountries'>All Countries</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link " to='allcountries'>All Countries</Link>
+        <Link className="nav-link" to='news'>Covid-19 News</Link>
       </li>
        <li className="nav-item">
         <Link className="nav-link " to='*'>Symtoms & Prevention</Link>
