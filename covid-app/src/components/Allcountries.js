@@ -26,7 +26,7 @@ const URL_Countries='https://disease.sh/v3/covid-19/countries'
 
     return (
         <div className=' all_countries'>
-            <h1 className='text-center pb-3'>All Countries</h1>
+            <h1 className='text-center pb-3 blue-cl'>All Countries</h1>
             <div className='text-center pb-3'>
 
         <input className='text-center p-3' type="text" placeholder='Search Your Country' onChange={e=>setSearchCountry(e.target.value)}/>

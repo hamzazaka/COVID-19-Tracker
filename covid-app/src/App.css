@@ -12,10 +12,82 @@
 
 body{
     background-color: #f5f6fa;
+    background-image: url('./components/Assets/background-img.jpg');
+    /* background-position: 100px 10px; */
+    background-position: center;
+}
+.cl-blue{
+    color: var(--blue);
 }
 
-/* //////////// HEADER ////////////////////////*/
+.blue-cl{
+    margin: 30px 0;
+    font-size: 47px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--blue);
+    text-transform: uppercase;
+}
 
+/* //////////// NAVBAR ////////////////////////*/
+
+.menu1{
+    padding: 20px 24px !important;
+    background: transparent !important;
+    color: black !important;
+
+}
+.navbar-brand{
+    font-size: 23px !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--blue) !important;
+    /* border: 2px solid red; */
+}
+.mynav a{
+    margin-right: 20px !important;
+    font-size: 20px;
+    line-height: 2px;
+    color: black !important;
+    border: 2px solid transparent;
+    padding: 17px;
+    border-radius: 5px;
+}
+.mynav a:hover{
+    background:var(--blue);
+
+}
+
+/* /////////// ///////////////////////////////////////*/
+
+
+
+/* //////////// HEADER ////////////////////////*/
+.header{
+    background-image: url('./components/Assets/home-bg.jpg');
+    /* background-position: 100px 10px; */
+    /* background-position: center; */
+    background-position: right 35% bottom 25%; 
+    height: 80vh;
+}
+.btn-primary{
+    background-color: var(--blue) !important;
+    padding: 15px;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.heading-header{
+    text-align: center;
+    padding-top: 40px;
+}
+.heading-header h1{
+   font-size: 37px;
+   font-weight: 700;
+   letter-spacing: 3px;
+   color: var(--blue);
+
+}
 
 /* ///////////  HEADER END HERE ///////////////*/
 
@@ -127,18 +199,13 @@ body{
 }
 
 .infoBox--selected{
-    border-top: 10px solid green;
+    border-top: 10px solid var(--blue);
 }
 
 /* .infoBox--Red{
     border-color: red;
 } */
 
-/* HEADER */
-
-.header{
-    height: 60vh;
-}
 
 /* ///////////// NEWS ROOM ////////////// */
 

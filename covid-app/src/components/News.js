@@ -22,7 +22,7 @@ const newsData= async ()=>{
 
     return (
         <section className='news_body '>
-            <h1 className='text-center top-heading'>Top News of Covid-19</h1>
+            <h1 className='text-center top-heading blue-cl'>Top News of Covid-19</h1>
         {news?.length > 0 && (
         <div className='row news-inner'>
             {news.map((mynews)=>{

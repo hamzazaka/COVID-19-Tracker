@@ -13,6 +13,12 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import News from './components/News';
 import Allcountries from './components/Allcountries';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 
@@ -76,15 +82,23 @@ function App() {
   console.log('country info', countryInfo);
 
   return(
+    <Router>
     <>
     <Navbar/>
-    {/* <News/> */}
+    <Switch>
+    <Route path='/news'>
+    <News/>
+    </Route>
+    <Route path='/allcountries'>
     <Allcountries/>
+    </Route>
+    <Route path='/hamza'> 
       <Header/>
+      <h1 className='text-center blue-cl'>World Wide Data</h1>
     <div className="app">
       <div className="app__left">
       <div className="app__header">
-    <h1>Covid-19 Data </h1>
+    <h1 className='cl-blue'>Covid-19 Data </h1>
       <FormControl className='app__dropdown'>
         <Select variant='outlined' onChange={onCountryChange} value={country} >
           <MenuItem value='Worldwide'>WorldWide</MenuItem>
@@ -129,8 +143,11 @@ function App() {
        </CardContent>
      </Card>
     </div>
+    </Route>
+    </Switch>
      
     </>
+  </Router>
   )
   
 }
