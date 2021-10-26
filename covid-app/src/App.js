@@ -19,6 +19,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Notfound from './components/Notfound';
 
 
 
@@ -86,13 +87,13 @@ function App() {
     <>
     <Navbar/>
     <Switch>
-    <Route path='/news'>
+    {/* <Route path='/news'>
     <News/>
     </Route>
     <Route path='/allcountries'>
     <Allcountries/>
-    </Route>
-    <Route path='/hamza'> 
+    </Route> */}
+    <Route exact path='/'> 
       <Header/>
       <h1 className='text-center blue-cl'>World Wide Data</h1>
     <div className="app">
@@ -143,6 +144,15 @@ function App() {
        </CardContent>
      </Card>
     </div>
+    </Route>
+    <Route path='/news'>
+    <News/>
+    </Route>
+    <Route path='/allcountries'>
+    <Allcountries/>
+    </Route>
+    <Route path='*'>
+    <Notfound/>
     </Route>
     </Switch>
      

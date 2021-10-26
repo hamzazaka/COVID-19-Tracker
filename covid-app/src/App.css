@@ -267,4 +267,16 @@ box-shadow: 1px 3px 5px rgba(43, 36, 36, 0.671);
      border: 20px solid rgb(255, 255, 255)
 }
 
+/* ///////////////// NOT FOUND /////////////////////*/
+
+.not-found{
+    text-align: center;
+}
+.not-found h1{
+    font-size: 133px;
+}
+.not-found p{
+    font-size: 35px;
+}
+
 
